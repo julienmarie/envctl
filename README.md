@@ -140,7 +140,15 @@ install -m 0755 target/release/envctl "$HOME/.local/bin/envctl"
 
 On Linux, a desktop Secret Service implementation is recommended for keyring
 storage. Headless systems automatically fall back to a restrictive local key
-file when the keyring is unavailable.
+file when the keyring is unavailable. Release binaries dynamically use the
+system D-Bus library, which is present on most desktop distributions. Minimal
+installations may need `libdbus-1-3` on Debian/Ubuntu or `dbus-libs` on Fedora.
+
+Building from source on Debian/Ubuntu additionally requires:
+
+```sh
+sudo apt-get install build-essential pkg-config libdbus-1-dev
+```
 
 ## Quick start
 
