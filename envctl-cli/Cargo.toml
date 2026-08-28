@@ -1,0 +1,33 @@
+[package]
+name = "envctl-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+description = "A local-first encrypted developer secret manager"
+readme = "../README.md"
+keywords = ["cli", "secrets", "environment", "developer-tools"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "envctl"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+chrono.workspace = true
+clap.workspace = true
+directories.workspace = true
+dotenvy.workspace = true
+envctl-core.workspace = true
+envctl-crypto.workspace = true
+envctl-k8s.workspace = true
+envctl-runner.workspace = true
+envctl-sync.workspace = true
+envctl-store.workspace = true
+envctl-tui.workspace = true
+rpassword.workspace = true
+uuid.workspace = true

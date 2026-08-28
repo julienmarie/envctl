@@ -1,0 +1,9 @@
+[package]
+name = "envctl-k8s"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+envctl-core.workspace = true

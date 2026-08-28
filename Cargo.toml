@@ -1,0 +1,50 @@
+[workspace]
+members = [
+    "envctl-cli",
+    "envctl-core",
+    "envctl-crypto",
+    "envctl-k8s",
+    "envctl-runner",
+    "envctl-sync",
+    "envctl-store",
+    "envctl-tui",
+]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+version = "0.1.0"
+authors = ["Julien Marie"]
+repository = "https://github.com/julienmarie/envctl"
+homepage = "https://github.com/julienmarie/envctl"
+rust-version = "1.85"
+
+[workspace.dependencies]
+anyhow = "1"
+base64 = "0.22"
+chacha20poly1305 = "0.10"
+chrono = { version = "0.4", features = ["clock", "serde"] }
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.29"
+directories = "6"
+dotenvy = "0.15"
+keyring = { version = "3", features = ["apple-native", "windows-native", "sync-secret-service"] }
+rand = "0.8"
+ratatui = "0.29"
+rpassword = "7"
+rusqlite = { version = "0.37", features = ["bundled", "chrono", "uuid"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+thiserror = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
+zeroize = "1"
+
+envctl-core = { path = "envctl-core" }
+envctl-crypto = { path = "envctl-crypto" }
+envctl-k8s = { path = "envctl-k8s" }
+envctl-runner = { path = "envctl-runner" }
+envctl-sync = { path = "envctl-sync" }
+envctl-store = { path = "envctl-store" }
+envctl-tui = { path = "envctl-tui" }
